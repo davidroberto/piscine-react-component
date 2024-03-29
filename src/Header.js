@@ -1,5 +1,5 @@
 const Header = () => {
-  const frameworks = ["express", "react", "nest"];
+  const isAuthenticated = false;
 
   return (
     <header>
@@ -14,11 +14,9 @@ const Header = () => {
         </ul>
       </nav>
 
-      <ul>
-        {frameworks.map((framework) => {
-          return <li>{framework}</li>;
-        })}
-      </ul>
+      {isAuthenticated ? <p>Vous êtes authentifié</p> : <p>Merci de vous connecter</p>}
+
+      <ul></ul>
     </header>
   );
 };
