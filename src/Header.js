@@ -1,4 +1,6 @@
 const Header = () => {
+  const frameworks = ["express", "react", "nest"];
+
   return (
     <header>
       <img
@@ -12,7 +14,11 @@ const Header = () => {
         </ul>
       </nav>
 
-      <p>Bonjour David</p>
+      <ul>
+        {frameworks.map((framework) => {
+          return <li>{framework}</li>;
+        })}
+      </ul>
     </header>
   );
 };
